@@ -2,6 +2,7 @@
 ;; Packages
 ;;;;
 (defvar user-XFemacs-directory ())
+(setq byte-compile-warnings '(cl-functions))
 ;; Define package repositories
 (require 'package)
 (add-to-list 'package-archives
