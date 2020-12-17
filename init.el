@@ -68,12 +68,15 @@
 
     ;; colorful parenthesis matching
     rainbow-delimiters
-nnN
+
     ;; edit html tags like sexps
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; Auto add libs to clojure
+    clj-refactor))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -148,8 +151,10 @@ nnN
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   '("0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" default))
  '(package-selected-packages
-   '(markdown-mode clj-refactor magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
+   '(solarized-theme markdown-mode clj-refactor magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

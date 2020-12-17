@@ -6,7 +6,7 @@
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
-
+(tool-bar-mode -1)
 ;; Show line numbers
 (global-linum-mode)
 
@@ -26,7 +26,7 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tomorrow-night-bright t)
+(load-theme 'solarized-dark t)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
