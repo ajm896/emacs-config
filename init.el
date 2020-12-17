@@ -68,7 +68,7 @@
 
     ;; colorful parenthesis matching
     rainbow-delimiters
-
+nnN
     ;; edit html tags like sexps
     tagedit
 
@@ -83,8 +83,9 @@
 ;; This library works around this problem by copying important
 ;; environment variables from the user's shell.
 ;; https://github.com/purcell/exec-path-from-shell
-(if (eq system-type 'darwin)
-    (add-to-list 'my-packages 'exec-path-from-shell))
+(when (eq system-type 'darwin)
+    (add-to-list 'my-packages 'exec-path-from-shell)
+    (setq mac-command-modifier 'meta))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -148,7 +149,7 @@
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(package-selected-packages
-   '(clj-refactor magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
+   '(markdown-mode clj-refactor magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
